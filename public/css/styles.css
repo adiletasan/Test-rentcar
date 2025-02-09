@@ -1,0 +1,274 @@
+body {
+  font-family: sans-serif; 
+  background-color: #111; 
+  color: #fff;  
+}
+
+/* ... (rest of your styles from before) */
+
+.container-fluid.bg-dark {  /* Style the brands bar /
+  background-color: #222 !important; / Slightly lighter dark for brands bar */
+}
+
+.brand-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+  background-color: transparent; /* Initially transparent */
+}
+
+.brand-link:hover,
+.brand-link.active {
+  background-color: #ffffff33; /* Slightly transparent white on hover/active */
+  color: #fff;
+}
+
+/* ... (rest of your styles) */
+
+.car-card {
+  background: #222; /* Slightly lighter dark for car cards /
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); / More prominent shadow */
+  transition: transform 0.2s;
+}
+
+.car-card:hover {
+  transform: translateY(-8px); /* Increased hover lift /
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); / More intense shadow on hover */
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  /* ... (styles as before) /
+  background: rgba(0, 0, 0, 0.6); / Slightly more opaque background */
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.8); /* Even more opaque on hover */
+}
+
+.car-title {
+  color: #eee; /* Slightly lighter title color /
+  margin-bottom: 8px;
+  font-weight: 500; / Slightly bolder title */
+}
+
+.daily-rate {
+  color: #ddd; /* Slightly lighter rate color /
+  font-size: 1.1rem;
+  font-weight: 400; / Slightly less bold rate */
+}
+
+/* ... (rest of your styles) */
+
+.sort-options .sort-link { /* Style sort links /
+  color: #aaa; / Slightly lighter color for sort links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sort-options .sort-link:hover,
+.sort-options .sort-link.active {
+  color: #fff; /* White on hover/active */
+}
+
+/* Add some spacing to the sort links /
+.sort-options .sort-link {
+  margin: 0 5px; / Add some horizontal margin /
+}
+/ Add Car Form Styles */
+.add-car-form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.add-car-form .form-control {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+.add-car-form .form-control:focus {
+  border-color: #666;
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.1);
+}
+
+.add-car-form label {
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.add-car-form input[type="file"] {
+  padding: 8px;
+}
+
+#imagePreview {
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#imagePreview img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.add-car-form .btn-primary {
+  background-color: #0056b3;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.add-car-form .btn-primary:hover {
+  background-color: #004494;
+}
+/* Add to your existing styles.css */
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #666;
+}
+/* Add these styles to your styles.css file */
+.car-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.67%; /* 3:2 aspect ratio */
+  overflow: hidden;
+}
+
+.car-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 2;
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.favorite-btn i {
+  color: white;
+  font-size: 18px;
+}
+
+.car-details {
+  padding: 20px;
+}
+
+.car-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 5px 0;
+}
+
+.car-category {
+  color: #888;
+  font-size: 14px;
+  margin: 0 0 15px 0;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spec-label {
+  color: #888;
+  font-size: 14px;
+}
+
+.spec-value {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.daily-rate {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.order-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.order-btn:hover {
+  background: #0056b3;
+  text-decoration: none;
+}

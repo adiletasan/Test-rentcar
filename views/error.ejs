@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mt-5">
+                <div class="card-body text-center">
+                    <h2 class="card-title text-danger mb-4">Error</h2>
+                    <% if (locals.message) { %>
+                        <p class="lead mb-4"><%= message %></p>
+                    <% } %>
+                    <% if (locals.error && process.env.NODE_ENV === 'development') { %>
+                        <div class="alert alert-danger">
+                            <pre class="mb-0"><%= JSON.stringify(error, null, 2) %></pre>
+                        </div>
+                    <% } %>
+                    <a href="/" class="btn btn-primary">Return to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>

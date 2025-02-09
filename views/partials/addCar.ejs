@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить автомобиль</title>
+</head>
+<body>
+    <%- include('header') %>
+    
+    <div class="container">
+        <div class="add-car-container">
+            <h2>Добавить новый автомобиль</h2>
+            
+            <form action="/cars/add" method="POST" enctype="multipart/form-data" class="add-car-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="brand">Марка</label>
+                        <select id="brand" name="brand" required>
+                            <option value="">Выберите марку</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Kia">Kia</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Jac">Jac</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="model">Модель</label>
+                        <input type="text" id="model" name="model" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Категория</label>
+                        <select id="category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="Хэтчбек">Хэтчбек</option>
+                            <option value="Седан">Седан</option>
+                            <option value="Внедорожник">Внедорожник</option>
+                            <option value="Кроссовер">Кроссовер</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Год выпуска</label>
+                        <input type="number" id="year" name="year" min="2000" max="2024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="engineSize">Объем двигателя (л)</label>
+                        <input type="text" id="engineSize" name="specifications[engineSize]" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="driveType">Привод</label>
+                        <select id="driveType" name="specifications[driveType]" required>
+                            <option value="полный">полный</option>
+                            <option value="передний">передний</option>
+                            <option value="задний">задний</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="acceleration">Разгон до 100 км/ч (сек)</label>
+                        <input type="number" id="acceleration" name="specifications[acceleration]" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="power">Мощность (л.с.)</label>
+                        <input type="number" id="power" name="specifications[power]" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dailyRate">Стоимость в сутки (₸)</label>
+                        <input type="number" id="dailyRate" name="dailyRate" required>
+                    </div>
+                </div>
+
+                <div class="form-group image-upload">
+                    <label for="image">Фотография автомобиля</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <div id="imagePreview"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Добавить автомобиль</button>
+                    <a href="/cars" class="cancel-btn">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <%- include('footer') %>
+</body>
+</html>
